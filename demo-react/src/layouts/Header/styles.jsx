@@ -6,8 +6,11 @@ export const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     height: 135px;
-    padding: 0 11em;
+
+    padding: 0rem 9.5rem;
+    
     background-image: url(${Images.bgTop});
     background-position-x: left;
     background-position-y: bottom;

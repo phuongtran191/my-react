@@ -1,6 +1,10 @@
+import * as Style from '../Dashboard/styles';
+
 function AdminDashboardPage() {
     return (
-        <div>AdminDashboard Page</div>
+        <Style.DashboardContent>
+            AdminDashboard Page
+        </Style.DashboardContent>
     );
 }
 export default AdminDashboardPage;

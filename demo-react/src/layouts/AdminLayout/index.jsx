@@ -8,22 +8,27 @@ import * as Style from './styles';
 function AdminLayout({exact, path, component: Component}) {
     const [isShowSidebar, setIsShowSidebar] = useState(true);
 
-    const userRegister = JSON.parse(localStorage.getItem("userRegister"));
+    // const userRegister = JSON.parse(localStorage.getItem("userRegister"));
 
-    if ( !userRegister) {
-        return <Redirect to="/admin" />;
-    } else {
-        if (userRegister.role === "user") {
-            return <Redirect to="/" />;
-        } else {
+    // if ( !userRegister) {
+    //     return <Redirect to="/admin" />;
+    // } else {
+    //     if (userRegister.role === "user") {
+    //         return <Redirect to="/" />;
+    //     } else {
             return (
                 <Route exact={exact} path={path} render={(routeProps) => {
                     return (
                         <>
                             <Style2.MainContainer>
-                                <Sidebar {...routeProps} isShowSidebar={isShowSidebar} />
+                                <Sidebar 
+                                    {...routeProps} 
+                                    setIsShowSidebar={setIsShowSidebar}
+                                    isShowSidebar={isShowSidebar} 
+                                />
+
                                 <Style.AdminContent show={isShowSidebar}>
-                                    <Header />
+                                    <Header type="admin" show={isShowSidebar} />
                                     <Component {...routeProps} />
                                 </Style.AdminContent>
                             </Style2.MainContainer>
@@ -33,7 +38,7 @@ function AdminLayout({exact, path, component: Component}) {
                 />
             );
         }
-    }
+//     }
     
-}
+// }
 export default AdminLayout;

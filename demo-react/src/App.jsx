@@ -11,11 +11,12 @@ import TheaterPage from './pages/user/Theater';
 import MemberPage from './pages/user/Member';
 import ContactPage from './pages/user/Contact';
 import ProductDetailPage from './pages/user/ProductDetail';
-import NotFoundPage from './pages/NotFound';
 import DefaultLayout from './layouts/DefaultLayout';
 import AdminLayout from './layouts/AdminLayout';
 import DashboardPage from './pages/admin/Dashboard';
 import ProductListPage from './pages/admin/ProductList';
+
+import NotFoundPage from './pages/NotFound';
 
 function App(props) {
   

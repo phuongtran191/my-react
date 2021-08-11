@@ -1,12 +1,13 @@
-import { LeftSquareOutlined, RightSquareOutlined,
-    AppstoreOutlined, BuildOutlined, SettingOutlined,
-    TeamOutlined, DollarCircleOutlined
+import {
+    AppstoreOutlined, BuildOutlined, DollarCircleOutlined, 
+    LeftSquareOutlined, RightSquareOutlined, SettingOutlined,
+    TeamOutlined
 } from '@ant-design/icons';
 import { Button } from 'antd';
-
-import { Link } from 'react-router-dom';
+import { Images } from '../../assets/constants/images';
 import history from '../../utils/history';
 import * as Style from './styles';
+
 
 const SIDEBAR_MENU = [
     {
@@ -57,7 +58,9 @@ function Sidebar({location, isShowSidebar, setIsShowSidebar}) {
         <>
             <Style.SidebarContainer show={isShowSidebar}>
                 <Style.SidebarHeader>
-                    <span className="brand">ChuDu Admin</span>
+                    <Style.SidebarBrand>
+                        <img src={Images.cgvLogo} alt=""/>
+                    </Style.SidebarBrand>
                     <Button
                         type="text"
                         icon={isShowSidebar

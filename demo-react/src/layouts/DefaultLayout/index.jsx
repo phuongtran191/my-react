@@ -10,7 +10,7 @@ function DefaultLayout(props) {
         <Route exact={exact} path={path} render={(routeProps) => {
             return (
                 <>
-                    <Header/>
+                    <Header type="user" />
                     <Style.MainContainer>
                         <Style.MainContent>
                             <Component {...routeProps} />
