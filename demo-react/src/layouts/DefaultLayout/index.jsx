@@ -1,6 +1,7 @@
-import Header from './Header';
-import Footer from './Footer';
 import { Route } from "react-router-dom";
+import Footer from '../Footer';
+import Header from '../Header';
+import * as Style from './styles';
 
 
 function DefaultLayout(props) {
@@ -10,11 +11,11 @@ function DefaultLayout(props) {
             return (
                 <>
                     <Header/>
-                    <div className="main-container">
-                        <div className="main-content">
+                    <Style.MainContainer>
+                        <Style.MainContent>
                             <Component {...routeProps} />
-                        </div>
-                    </div>
+                        </Style.MainContent>
+                    </Style.MainContainer>
                     <Footer/>
                 </>
             );

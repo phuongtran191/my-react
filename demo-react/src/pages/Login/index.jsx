@@ -1,24 +1,25 @@
 import { Form, Input, Button, Checkbox } from 'antd';
 import { Link } from 'react-router-dom';
-import history from '../../utils/history';
-import {userList} from '../../constants/user';
+// import history from '../../utils/history';
+// import {userList} from '../../constants/user';
 
 function LoginPage() {
-    function handleSubmit(values) {
-        const userInfo = userList.find((user) => {
-            return user.name === values.username && user.password === values.password;
-        });
-        if (userInfo) {
-            localStorage.setItem("userInfo", JSON.stringify(userInfo));
-            if (userInfo.role === "user") {
-                history.push("/");
-            } else {
-                history.push("/admin");
-            }
-        } else {
-            alert("DANG NHAP THAT BAI!");
-        }
-    }
+
+    // function handleSubmit(values) {
+    //     const userInfo = userList.find((user) => {
+    //         return user.name === values.username && user.password === values.password;
+    //     });
+    //     if (userInfo) {
+    //         localStorage.setItem("userInfo", JSON.stringify(userInfo));
+    //         if (userInfo.role === "user") {
+    //             history.push("/");
+    //         } else {
+    //             history.push("/admin");
+    //         }
+    //     } else {
+    //         alert("DANG NHAP THAT BAI!");
+    //     }
+    // }
 
     return (
         <div className="login-container">
@@ -30,7 +31,7 @@ function LoginPage() {
                     name="basic"
                     layout="vertical"
                     initialValues={{ remember: true }}
-                    onFinish={(values) => handleSubmit(values)}
+                    onFinish={() => null}
                 >
                     <Form.Item
                     label="Username"

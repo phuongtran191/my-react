@@ -15,6 +15,7 @@ import NotFoundPage from './pages/NotFound';
 import DefaultLayout from './layouts/DefaultLayout';
 import AdminLayout from './layouts/AdminLayout';
 import DashboardPage from './pages/admin/Dashboard';
+import ProductListPage from './pages/admin/ProductList';
 
 function App(props) {
   
@@ -29,6 +30,10 @@ function App(props) {
         <DefaultLayout exact path="/register" component={RegisterPage} />
 
         <AdminLayout exact path="/admin" component={DashboardPage} />
+        <AdminLayout exact path="/admin/products" component={ProductListPage} />
+        {/* <AdminLayout exact path="/admin/users" component={UserListPage} /> */}
+        {/* <AdminLayout exact path="/admin/revenues" component={RevenuePage} /> */}
+        {/* <AdminLayout exact path="/admin/settings" component={SettingPage} /> */}
 
         <DefaultLayout exact path="/member" component={MemberPage} />
         <DefaultLayout exact path="/product/:id" component={ProductDetailPage} />
