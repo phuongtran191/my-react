@@ -1,5 +1,6 @@
-import Select from "react-select/src/select";
-import { FormGroup } from "reactstrap";
+import Select from "react-select";
+import { FormGroup, Label } from "reactstrap";
+import React from 'react';
 
 function SelectField(props) {
   const { field, form,

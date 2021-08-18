@@ -17,7 +17,7 @@ function App() {
           <Switch>
             <Redirect exact from="/" to="/photos" />
 
-            <Route exact path="/photos" component={Photo} />
+            <Route path="/photos" component={Photo} />
             <Route component={NotFound} />
           </Switch>
         </BrowserRouter>

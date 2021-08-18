@@ -1,3 +1,4 @@
+import React from 'react';
 import Banner from "components/Banner";
 import Images from "constants/images";
 import PhotoForm from "features/Photo/components/PhotoForm";

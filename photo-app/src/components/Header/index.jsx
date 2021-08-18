@@ -1,6 +1,8 @@
+import React from 'react';
 import { NavLink } from "react-router-dom";
 import { Col, Container, Row } from "reactstrap";
 import "./Header.scss";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Header() {
     return (
@@ -24,7 +26,7 @@ function Header() {
                             to="/photos"
                             activeClassName="header__link--active"
                         >
-                            Redux Project
+                            Sign In
                         </NavLink>
                     </Col>
                 </Row>
